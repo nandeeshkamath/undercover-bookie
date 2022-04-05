@@ -9,6 +9,10 @@ curl --location --request GET "$DOMAIN_URL/actuator/health" \
 sleep 15
 
 # Check for ticket availability
-curl --location --request GET "$DOMAIN_URL/spy?eventId=ET00094579&regionCode=KUNA&regionSlug=kundapura&keyword=Book%20tickets" \
+curl --location --request GET "$DOMAIN_URL/spy?eventId=ET00098647&regionCode=MANI&regionSlug=manipal&keyword=Book%20tickets" \
+--header "Authorization: Basic $SECRET_TOKEN" \
+--header 'Content-Type: application/json'
+
+curl --location --request GET "$DOMAIN_URL/spy?eventId=ET00310791&regionCode=MANI&regionSlug=manipal&keyword=Book%20tickets" \
 --header "Authorization: Basic $SECRET_TOKEN" \
 --header 'Content-Type: application/json'
